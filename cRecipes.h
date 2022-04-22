@@ -64,3 +64,17 @@ void ludcmp(float **a, int n, int *indx, float *d);
     Matrix inversion using LU decomposition
 */
 void matinv(double **a, double **inv, int n );
+/*
+	nonlinear fitting routines
+*/
+void mrqmin(float x[], float y[], float sig[], int ndata, float a[], int ia[],
+	int ma, float **covar, float **alpha, float *chisq,
+	void (*funcs)(float, float [], float *, float [], int), float *alamda);
+
+void mrqcof(float x[], float y[], float sig[], int ndata, float a[], int ia[],
+	int ma, float **alpha, float beta[], float *chisq,
+	void (*funcs)(float, float [], float *, float [], int));
+
+void covsrt(float **covar, int ma, int ia[], int mfit);
+
+void gaussj(float **a, int n, float **b, int m);
