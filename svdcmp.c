@@ -9,15 +9,15 @@ static double maxarg1a,maxarg2a;
 #define MAX(a,b) (maxarg1a=(a),maxarg2a=(b),(maxarg1a) > (maxarg2a) ?\
 	(maxarg1a) : (maxarg2a))
 #define SIGN(a,b) ((b) >= 0.0 ? fabs(a) : -fabs(a))
+void nrerror(char *msg);
 
-void svdcmp(double **a,int m,int n, double *w,double **v)
+void svdcmp(double **a,int32_t m,int32_t n, double *w,double **v)
 {
-	int flag,i,its,j,jj,k,l,nm;
+	int32_t flag,i,its,j,jj,k,l,nm;
 	double c,f,h,s,x,y,z;
 	double anorm=0.0,g=0.0,scale=0.0;
 	double *rv1;
-	void nrerror();
-
+	
 	if (m < n) nrerror("SVDCMP: You must augment A with extra zero rows");
 	rv1=dvector(1,n);
 	for (i=1;i<=n;i++) {

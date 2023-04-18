@@ -1,5 +1,10 @@
 CC =		gcc
-CFLAGS  =	-m32 $(FLAGS) -c -I$(INCLUDEPATH)
+INCLUDEPATH =	..
+CFLAGS  = -m32 $(FLAGS) -c -I$(INCLUDEPATH)
+ifeq ($(OSTYPE), darwin)
+	CFLAGS  = $(FLAGS) -c -I$(INCLUDEPATH)
+endif
+#echo $CFLAGS
 FFLAGS  =	 -g
 
 #ran0.o 
