@@ -27,12 +27,12 @@ void ratint(float xa[], float ya[], int32_t n, float x, float *y, float *dy);
 /*
     FFT routine
 */
-void four1(float data[], unsigned long nn, int32_t isign);
+void four1(float *data, unsigned long nn, int32_t isign);
 /*
     Least squares fit using svd and associated routines.
 */
-void svdfit(void *x, double y[], double sig[], int32_t ndata, double a[],
-            int32_t ma, double **u, double **v, double w[], double *chisq,
+void svdfit(void *x, double *y, double *sig, int32_t ndata, double *a,
+            int32_t ma, double **u, double **v, double *w, double *chisq,
             void (*funcs)(void *, int32_t i, double *, int));
 
 void svdvar(double **v, int32_t ma, double w[], double **cvm);

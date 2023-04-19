@@ -6,7 +6,7 @@
 	(a) = (b);     \
 	(b) = tempr
 
-void four1(float data[], unsigned long nn, int32_t isign)
+void four1(float *data, unsigned long nn, int32_t isign)
 {
 	unsigned long n, mmax, m, j, istep, i;
 	double wtemp, wr, wpr, wpi, wi, theta;

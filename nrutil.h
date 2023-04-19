@@ -1,3 +1,4 @@
+#include <stdint.h>
 #ifndef _NR_UTILS_H_
 #define _NR_UTILS_H_
 

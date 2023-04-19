@@ -3,8 +3,8 @@
 #include "cRecipes.h"
 #define TOL 1.0e-5
 
-void svdfit(void *x, double y[], double sig[], int32_t ndata, double a[], int32_t ma,
-			double **u, double **v, double w[], double *chisq,
+void svdfit(void *x, double *y, double *sig, int32_t ndata, double *a, int32_t ma,
+			double **u, double **v, double *w, double *chisq,
 			void (*funcs)(void *, int32_t i, double *, int))
 {
 	int32_t j, i;

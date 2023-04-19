@@ -1,5 +1,5 @@
 #if defined(__STDC__) || defined(ANSI) || defined(NRANSI) /* ANSI */
-
+#include <stdint.h>
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>

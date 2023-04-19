@@ -1,6 +1,6 @@
 CC =		gcc
 INCLUDEPATH =	..
-CFLAGS  = -m32 $(FLAGS) -c -I$(INCLUDEPATH)
+CFLAGS  =  $(FLAGS) -c -I$(INCLUDEPATH)
 ifeq ($(OSTYPE), darwin)
 	CFLAGS  = $(FLAGS) -c -I$(INCLUDEPATH)
 endif
