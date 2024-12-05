@@ -12,7 +12,7 @@ OBJS=	gammln.o poidev.o sort.o polint.o nrutil.o ratint.o four1.o \
 	mrqmin.o mrqcof.o covsrt.o gaussj.o
 
 MACHTYPE = $(shell uname -m)
-OSTYPE = $(shelf uname -s)
+OSTYPE = $(shell uname -s)
 
 $(shell mkdir -p $(MACHTYPE)-$(OSTYPE))
 
